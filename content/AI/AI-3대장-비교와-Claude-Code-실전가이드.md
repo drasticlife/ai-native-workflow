@@ -1,9 +1,21 @@
 ---
 title: AI 3대장(Claude·ChatGPT·Gemini) 비교와 Claude Code 실전 활용 가이드
-tags: [claude, chatgpt, gemini, claude-code, ai-도구비교, 사내교육]
-created: 2026-07-25
-updated: 2026-07-25
+tags:
+  - claude
+  - chatgpt
+  - gemini
+  - claude-code
+  - ai-도구비교
+  - 사내교육
+date created: 2026-07-25
+date_modified: 2026-07-25 23:47
+source: ""
+한줄요약: ""
+processed: false
+comment: AI/코딩을 처음 접하는 분들을 위해 Claude·ChatGPT·Gemini 세 도구의 차이를 잡고, 그중 Claude Code를 실제로 운영하는 법까지 이어지는 브리핑 자료입니다.
+notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d3aac04db
 ---
+
 
 # AI 3대장 비교와 Claude Code 실전 활용 가이드
 
