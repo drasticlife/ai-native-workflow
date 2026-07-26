@@ -1,0 +1,51 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body, article {
+  font-family: 'Pretendard', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+code, pre {
+  font-family: 'Pretendard', 'Courier New', monospace !important;
+  font-size: 13px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+}
+h3, h4, h5, h6 {
+  font-weight: 600 !important;
+}
+
+h2 {
+  position: relative;
+  padding-bottom: 0.25em;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e7eb;
+  margin-top: 0.2em;
+  border-radius: 1px;
+}
+
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1.5em 0 !important;
+}
+th {
+  border: 1px solid #ddd !important;
+  padding: 10px 14px !important;
+  text-align: left !important;
+  background-color: #f5f5f5 !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #ccc !important;
+}
+td {
+  border: 1px solid #ddd !important;
+  padding: 10px 14px !important;
+}
