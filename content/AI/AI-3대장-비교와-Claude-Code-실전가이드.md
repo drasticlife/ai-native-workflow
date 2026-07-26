@@ -16,6 +16,8 @@ comment: AI/코딩을 처음 접하는 분들을 위해 Claude·ChatGPT·Gemini 
 notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d3aac04db
 ---
 
+#claude #chatgpt #gemini #claude-code #ai-도구비교 #사내교육
+
 
 # AI 3대장 비교와 Claude Code 실전 활용 가이드
 
@@ -23,12 +25,12 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 
 ---
 
-## 1. 개념/배경
+## 개념/배경
 
-### 1-1. 왜 세 도구를 비교하나
+### 왜 세 도구를 비교하나
 사내에서 AI를 처음 쓰는 분들에게 필요한 건 기능 나열이 아니라 "언제 뭘 쓰면 되는가"라는 감각입니다. 이 감각을 잡은 다음 단계가 "AI 에이전트를 어떻게 구축할 것인가"이므로, 이 문서는 그 direct 앞단 브리핑 역할을 합니다.
 
-### 1-2. 한눈에 보기
+### 한눈에 보기
 
 | 구분 | Claude | ChatGPT | Gemini |
 |---|---|---|---|
@@ -40,7 +42,7 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 > [!note]
 > **창업 배경**: Anthropic은 2021년 OpenAI 부사장이던 다리오 아모데이 등 핵심 연구자들이 "AI가 너무 빨리, 안전 고려 없이 나간다"는 문제의식으로 집단 퇴사해 세운 회사입니다. Claude와 ChatGPT는 원래 같은 회사 동료가 갈라져 나온 관계라, Cowork↔ChatGPT Work·Claude Code↔Codex처럼 서로를 의식한 경쟁 구도가 계속 이어지고 있습니다.
 
-### 1-3. 기술 원리 — 정렬(Alignment) 단계에서 갈린다
+### 기술 원리 — 정렬(Alignment) 단계에서 갈린다
 
 세 모델 모두 "사전학습 → 지도 미세조정 → 인간 피드백 강화학습"이라는 큰 틀은 같습니다. 차이는 마지막 정렬 단계입니다.
 
@@ -52,9 +54,9 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 
 ---
 
-## 2. 준비물·도구
+## 준비물·도구
 
-### 2-1. 시작하기
+### 시작하기
 
 | | Claude | ChatGPT | Gemini |
 |---|---|---|---|
@@ -62,13 +64,13 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 | 개발자용 CLI | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` | Gemini CLI (npm 또는 공식 저장소) |
 | 무료 범위 | 기본 대화 무료, Cowork·컴퓨터 사용은 유료 | 기본 대화 무료, Work·Codex는 유료 | 기본 대화 무료, 고성능 모델·CLI 넉넉한 사용량은 유료 |
 
-### 2-2. Claude Code 기초 준비물
+### Claude Code 기초 준비물
 - **루트 디렉토리에서 실행** — 하위 폴더에서 실행하면 프로젝트 구조를 온전히 못 읽어 비효율적입니다.
 - **`CLAUDE.md` 한 장** — 프로젝트마다 하나씩, 매 세션 자동으로 읽히는 "기억" 파일입니다.
 
 ---
 
-## 3. 핵심 규칙
+## 핵심 규칙
 
 > [!tip] 세 서비스 공통 — 처음 쓸 때 지킬 5가지
 > 1. 질문을 구체적으로 쓴다 — "요약해줘"보다 "대학생 수준으로 3문단 요약해줘"
@@ -87,9 +89,9 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 
 ---
 
-## 4. 실습
+## 실습
 
-### 4-1. Step 1 — CLAUDE.md 작성
+### Step 1 — CLAUDE.md 작성
 ```
 절대 규칙 (예: 프로덕션 DB 직접 쿼리 금지, .env 커밋 금지)
 → 아키텍처 (트리 구조)
@@ -99,7 +101,7 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 ```
 150~300줄 이내로 유지합니다. 길어질수록 규칙이 무시되기 쉽습니다. 루트가 비대해지면 하위 폴더별로 별도 `CLAUDE.md`를 둡니다.
 
-### 4-2. Step 2 — 컨텍스트를 세션 단위로 관리
+### Step 2 — 컨텍스트를 세션 단위로 관리
 ```
 /clear     한 기능이 끝나면 컨텍스트 완전 초기화
 /compact   요약만 남기고 정리(압축)
@@ -108,24 +110,24 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 ```
 한 세션 = 한 기능 원칙을 지키고, 시도가 실패하면 ESC 두 번(리와인드)으로 실패 흔적을 남기지 않고 재시도합니다.
 
-### 4-3. Step 3 — Plan Mode로 먼저 계획, 그다음 실행
+### Step 3 — Plan Mode로 먼저 계획, 그다음 실행
 1. `Shift+Tab`으로 Plan Mode 전환
 2. 계획을 그냥 수락하지 말고 **적극적으로 편집**
 3. 승인 후 실행 → 작은 변경 → 테스트 → 통과 확인 → 커밋(TDD 사이클)
 4. 에러가 나면 로그 원문을 그대로 붙여넣기 (요약하지 않기)
 
-### 4-4. Step 4 — 자동화 확장 (스킬 / 서브에이전트 / 훅)
+### Step 4 — 자동화 확장 (스킬 / 서브에이전트 / 훅)
 - 반복 작업은 `.claude/commands/` 에 md 파일로 등록 (커스텀 슬래시 명령어)
 - 독립적인 작업이거나 컨텍스트 오염이 우려되면 서브에이전트로 격리 실행
 - `PreToolUse`/`PostToolUse`/`Notification`/`Stop` 훅으로 검증·알림 자동화 (무거운 작업은 타임아웃 필수)
 
-### 4-5. Step 5 — 병합 전 검증
+### Step 5 — 병합 전 검증
 - 클로드가 스스로 결과를 검증할 방법(테스트/린트/스크립트)을 반드시 마련 — 단, 테스트 로직 자체가 조작되지 않았는지는 사람이 확인
 - PR 생성 후 내장 코드 리뷰 스킬로 여러 리뷰 에이전트를 병렬 실행해 설계 충돌·버그 가능성을 짚어본 뒤 머지
 
 ---
 
-## 5. 결과물 확인
+## 결과물 확인
 
 다음이 모두 체크되면 이번 실습이 제대로 자리잡은 것입니다.
 
@@ -137,9 +139,9 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 
 ---
 
-## 6. 비교
+## 비교
 
-### 6-1. 작업 유형별 최적화
+### 작업 유형별 최적화
 | 작업 유형 | Claude | ChatGPT | Gemini |
 |---|---|---|---|
 | 긴 문서 분석·요약 | 신중하고 논리적인 정리 | 범용적으로 우수 | 매우 긴 문서를 통째로 처리 |
@@ -148,7 +150,7 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 | UI/프로토타입 | **Claude Design** — 대화로 클릭 가능한 프로토타입, Claude Code로 즉시 핸드오프 | 전용 디자인 캔버스 없음 | Workspace 문서 생성 + NotebookLM 인포그래픽 |
 | 지식베이스처럼 쓰기 | Projects + 파일 업로드 | Projects/맞춤 GPT | **Gemini↔NotebookLM** 동기화 — 오디오/인포그래픽 자동 생성 |
 
-### 6-2. 모델 등급 이름 체계
+### 모델 등급 이름 체계
 | 등급 | Claude | ChatGPT | Gemini |
 |---|---|---|---|
 | 가볍고 빠름 | Haiku 4.5 | GPT-5 mini 계열 | Flash-Lite |
@@ -158,7 +160,7 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 
 Claude만 이름 체계가 "짧은 글/음악 크기" 은유(Haiku→Sonnet→Opus)로 일관돼 있어 작을수록 가볍다는 걸 직관적으로 유추할 수 있습니다.
 
-### 6-3. 스킬 vs 서브에이전트 vs MCP — 컨텍스트 비용
+### 스킬 vs 서브에이전트 vs MCP — 컨텍스트 비용
 | | 안 쓸 때 비용 | 실행 중 비용 |
 |---|---|---|
 | 스킬 | 아주 가벼움 (이름+설명만 상시 로드) | 필요할 때만 전체 프롬프트 로드 |
@@ -169,7 +171,7 @@ Claude만 이름 체계가 "짧은 글/음악 크기" 은유(Haiku→Sonnet→Op
 
 ---
 
-## 7. 요약 및 Q&A
+## 요약 및 Q&A
 
 | 오늘 정리한 내용 | 요약 |
 |---|---|
