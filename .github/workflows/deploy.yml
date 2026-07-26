@@ -79,6 +79,11 @@ jobs:
         working-directory: quartz-engine
         run: npx quartz build -d "$GITHUB_WORKSPACE/content"
 
+      - name: Inject custom CSS
+        run: |
+          cp custom.css quartz-engine/public/custom.css
+          find quartz-engine/public -name '*.html' -print0 | xargs -0 sed -i 's#</head>#<link rel="stylesheet" href="/ai-native-workflow/custom.css"></head>#'
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: quartz-engine/public
