@@ -73,3 +73,20 @@ table tr:hover {
   max-width: 400px;
   font-size: 12px;
 }
+
+/* right-hand table of contents: show heading depth as indentation with a guide line */
+.toc-content li.depth-2 {
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--lightgray);
+}
+.toc-content li.depth-3 {
+  padding-left: 1.8rem;
+  border-left: 1px solid var(--lightgray);
+}
+
+/* left explorer: long note titles were wrapping to three lines */
+.explorer .nav-file-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
