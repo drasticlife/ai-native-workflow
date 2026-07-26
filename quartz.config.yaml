@@ -185,7 +185,7 @@ plugins:
       position: beforeBody
       priority: 10
   - source: github:quartz-community/content-meta
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 20
@@ -212,7 +212,7 @@ plugins:
       priority: 35
       group: toolbar
   - source: github:quartz-community/breadcrumbs
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 5
@@ -268,7 +268,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: publisher
+      theme: obsidian
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
