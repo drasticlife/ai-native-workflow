@@ -1,7 +1,16 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-body, article {
+/* Quartz sets font-family directly on body, headings, thead and popovers,
+   so each has to be named explicitly — inheritance from body is not enough. */
+body,
+article,
+h1, h2, h3, h4, h5, h6,
+thead,
+.popover > .popover-inner {
   font-family: 'Pretendard', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif !important;
+}
+
+body, article {
   font-size: 15px !important;
   line-height: 1.7 !important;
 }
@@ -32,6 +41,12 @@ h2::after {
   border-radius: 1px;
 }
 
+/* readable line length, matching the reference site */
+article {
+  max-width: 750px;
+  margin-inline: auto;
+}
+
 table {
   border-collapse: collapse !important;
   width: 100% !important;
@@ -48,4 +63,13 @@ th {
 td {
   border: 1px solid #ddd !important;
   padding: 10px 14px !important;
+  text-align: left !important;
+}
+table tr:hover {
+  background-color: #fafafa !important;
+}
+
+.mermaid {
+  max-width: 400px;
+  font-size: 12px;
 }
