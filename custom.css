@@ -77,21 +77,36 @@ table tr:hover {
   font-size: 12px;
 }
 
-/* Tag chips inherited --textHighlight (olive) as their background. */
-.tags .tag-link,
-a.tag-link {
-  background: var(--highlight) !important;
+/* Tag chips default to --highlight, which the obsidian theme paints orange.
+   Match the selector Quartz itself uses, or specificity loses. */
+a.internal.tag-link {
+  background-color: var(--lightgray) !important;
 }
 
-/* right-hand table of contents: show heading depth as indentation with a guide line.
-   --lightgray is too close to the dark background to read, so use --gray. */
-.toc-content li.depth-2 {
+/* Right-hand table of contents: indent by heading depth, with a guide line.
+   Every depth is listed because the numbering shifts by one depending on
+   whether the note has an H1 — keying off just depth-2/3 silently breaks. */
+.toc-content li.depth-1 {
   padding-left: 0.9rem;
   border-left: 1px solid var(--gray);
 }
-.toc-content li.depth-3 {
+.toc-content li.depth-2 {
   padding-left: 1.8rem;
   border-left: 1px solid var(--gray);
+}
+.toc-content li.depth-3 {
+  padding-left: 2.7rem;
+  border-left: 1px solid var(--gray);
+}
+
+/* The plugin has no option to retitle the TOC, so swap the text in CSS. */
+.toc-header h3 {
+  font-size: 0;
+}
+.toc-header h3::after {
+  content: "ON THIS PAGE";
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
 }
 
 /* left explorer: long note titles were wrapping to three lines */
