@@ -27,6 +27,10 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 
 ### 한눈에 보기
 
+![[Pasted image 20260728222113.png]]
+
+![[Pasted image 20260728222208.png]]
+
 | 구분 | Claude | ChatGPT | Gemini |
 |---|---|---|---|
 | 만든 회사 | Anthropic (2021) | OpenAI (2015) | Google DeepMind (2023 통합) |
@@ -37,6 +41,7 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 > [!note]
 > **창업 배경**: Anthropic은 2021년 OpenAI 부사장이던 다리오 아모데이 등 핵심 연구자들이 "AI가 너무 빨리, 안전 고려 없이 나간다"는 문제의식으로 집단 퇴사해 세운 회사입니다. Claude와 ChatGPT는 원래 같은 회사 동료가 갈라져 나온 관계라, Cowork↔ChatGPT Work·Claude Code↔Codex처럼 서로를 의식한 경쟁 구도가 계속 이어지고 있습니다.
 
+
 ### 기술 원리 — 정렬(Alignment) 단계에서 갈린다
 
 세 모델 모두 "사전학습 → 지도 미세조정 → 인간 피드백 강화학습"이라는 큰 틀은 같습니다. 차이는 마지막 정렬 단계입니다.
@@ -46,6 +51,13 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 | Claude | **Constitutional AI** — AI가 스스로 원칙(헌법)에 비추어 답을 비평·수정 후 재학습 | "Claude's Constitution" 문서가 실제로 공개되어 있음 |
 | ChatGPT | 표준 RLHF — 사람 평가자가 답변 순위를 매겨 보상모델 학습 | 압도적 사용자 수 기반 실사용 피드백량이 강점 |
 | Gemini | RLHF + 구글 검색/지식그래프 결합 | 텍스트·이미지·오디오·영상을 처음부터 함께 학습 |
+
+### 킬러기능
+![[Pasted image 20260728222504.png]]
+
+![[Pasted image 20260728222539.png]]
+
+![[Pasted image 20260728222556.png]]
 
 ---
 
@@ -137,6 +149,9 @@ notebook LM: https://notebooklm.google.com/notebook/6f3fbbc3-ece0-49e5-aa3f-d53d
 ## 비교
 
 ### 작업 유형별 최적화
+
+![[Pasted image 20260728222409.png]]
+
 | 작업 유형 | Claude | ChatGPT | Gemini |
 |---|---|---|---|
 | 긴 문서 분석·요약 | 신중하고 논리적인 정리 | 범용적으로 우수 | 매우 긴 문서를 통째로 처리 |
