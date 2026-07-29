@@ -66,7 +66,7 @@ updated: 2026-07-28
 
 > [!warning]
 > 여기서 정한 **username이 사이트 주소에 그대로 들어간다.** `https://<username>.github.io/<저장소>` 형태다.
-> 사내 공유용이라면 알아보기 쉬운 이름으로 정할 것. 나중에 바꾸면 주소도 바뀐다.
+
 
 ### 플러그인 설치하기
 
@@ -92,9 +92,7 @@ updated: 2026-07-28
 2. GitHub 로그인 화면이 뜨면 로그인하고 권한을 승인한다
 3. **폴더 선택 화면**이 나온다. 발행할 폴더를 하나 고른다
 
-> [!example] 📸 화면 02 — 폴더 선택 트리
-> **찍을 것:** Set up site 마법사의 폴더 트리 화면. 볼트 폴더 목록이 펼쳐져 있고 하나가 선택된 상태.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/02-폴더-선택.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223200.png]]
 
 > [!warning]
 > 여기서 고른 폴더가 **사이트 전체 범위**가 된다. 이 폴더 안의 모든 노트가 인터넷에 공개된다.
@@ -102,18 +100,15 @@ updated: 2026-07-28
 
 4. 다음 화면에서 **저장소 이름**을 입력한다
 
-> [!example] 📸 화면 03 — 저장소 이름 입력
-> **찍을 것:** 저장소 이름을 입력하는 화면. 입력란과 다음(생성) 버튼이 보이게.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/03-저장소-이름.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223301.png]]
+![[Pasted image 20260729223309.png]]
 
 여기 입력한 이름이 **주소가 된다.** `my-wiki`로 하면 `https://<username>.github.io/my-wiki`.
 짧게, 영문 소문자와 하이픈만 쓰는 것이 좋다.
 
 5. 생성 버튼을 누르면 진행 모달이 뜬다
 
-> [!example] 📸 화면 04 — 발행 진행 모달
-> **찍을 것:** 발행이 진행되는 모달. "Building and deploying site…" 같은 진행 문구가 보이는 순간.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/04-발행-진행.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223317.png]]
 
 **이 화면이 나오면 정상이다.** 플러그인이 저장소를 만들고 아래를 커밋한다.
 
@@ -155,9 +150,7 @@ title: 내 사이트 이름
 2. `publish` 입력
 3. **"GitHub Publish: Publish changes"** 선택
 
-> [!example] 📸 화면 05 — Command palette
-> **찍을 것:** `Ctrl+P`로 연 Command palette에 `publish` 입력한 상태. "Publish changes"와 "Set up site"가 **둘 다 보이는** 화면이면 좋다 (구분이 목적).
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/05-command-palette.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223403.png]]
 
 사이트가 하나면 선택창 없이 바로 발행된다. 발행 폴더 하위는 **재귀 스캔**되므로 하위 폴더를 자유롭게 나눠도 된다.
 
@@ -168,9 +161,7 @@ title: 내 사이트 이름
 6. `GitHub Publish: Publish changes` 행 오른쪽의 **`+` 버튼** 클릭
 7. 원하는 키 조합을 누른다
 
-> [!example] 📸 화면 06 — 단축키 바인딩
-> **찍을 것:** Hotkeys 설정에서 `publish` 검색한 상태. `Publish changes` 행과 `+` 버튼이 보이게.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/06-단축키-바인딩.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223515.png]]
 
 > [!warning]
 > `Ctrl+Shift+S`는 `GitHub Sync` 플러그인이 이미 쓰고 있을 수 있다. 겹치면 Obsidian이 경고를 띄운다.
@@ -190,13 +181,9 @@ Obsidian 안에서 여는 방법:
 3. 카드의 **"Edit Quartz config"** 버튼 클릭
 4. YAML 편집창이 열린다. 고친 뒤 **Save**
 
-> [!example] 📸 화면 07 — 사이트 카드
-> **찍을 것:** Settings → GitHub Publish 화면. 사이트 카드와 "Edit Quartz config" 버튼이 보이게.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/07-사이트-카드.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223638.png]]
 
-> [!example] 📸 화면 08 — Quartz config 편집창
-> **찍을 것:** "Edit Quartz config"를 눌렀을 때 뜨는 YAML 편집 모달. Save / Reset to default 버튼이 함께 보이게.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/08-config-편집창.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223646.png]]
 
 파일을 직접 열려면 이 경로다.
 
@@ -371,13 +358,9 @@ body, article, h1, h2, h3, h4, h5, h6, thead, .popover > .popover-inner {
 - 우측 목차가 제목 깊이만큼 들여쓰기된다
 - 다크/라이트를 토글해도 표 헤더와 본문이 모두 읽힌다
 
-> [!example] 📸 화면 09 — 완성된 사이트
-> **찍을 것:** 발행된 사이트를 브라우저에서 연 전체 화면. 좌측 트리 + 본문 + 우측 목차가 한 화면에 다 보이게.
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/09-완성-사이트.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223732.png]]
 
-> [!example] 📸 화면 10 — 다크·라이트 비교
-> **찍을 것:** 같은 페이지를 다크모드와 라이트모드로 각각 캡처. **표가 포함된 화면**이면 가장 좋다 (테마 변수 규칙의 근거가 된다).
-> **교체 방법:** 캡처 후 이 콜아웃 전체를 `![[_attachments/10-다크-라이트-비교.png]]` 로 바꾸면 끝.
+![[Pasted image 20260729223741.png]]
 
 터미널로 점검하려면:
 
