@@ -1,5 +1,5 @@
 ---
-title: Obsidian 노트를 무료 웹사이트로 발행하기 — GitHub Publish + Quartz 실전 가이드
+title: "11. 노트를 무료 웹사이트로 발행하기 — GitHub Publish + Quartz"
 tags:
   - obsidian
   - quartz
@@ -420,3 +420,6 @@ curl -sI https://<owner>.github.io/<repo>/       # 200 확인
 | `!important`로 덮었는데 무변화 | 값을 바꿔도 화면이 그대로 | 기본 규칙과 **같은 변수**로 덮어씀 | 변수가 아니라 실제 색이 뭔지 먼저 확인 |
 | 워크플로우 파일 수정이 404 | `gh api PUT`이 실패 | 토큰에 `workflow` 스코프 없음 | `gh auth refresh -h github.com -s workflow` |
 | 대문자 경로로 접속 | 빈 페이지 | URL이 소문자로 슬러그화됨 | `/ai/...` 처럼 소문자로 접근 |
+
+---
+← [[10-백업과-동기화]] · [[00-강의-목차|강의 목차]]
