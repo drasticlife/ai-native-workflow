@@ -12,6 +12,7 @@ configuration:
     - private
     - templates
     - .obsidian
+    - _작업기록
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
